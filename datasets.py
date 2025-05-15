@@ -103,8 +103,10 @@ class CustomDataset(Dataset):
 
         # Apply the image transforms.
         if self.transforms:
+            boxes = target['boxes'].tolist()
+            labels = labels.tolist()
             sample = self.transforms(image = image_resized,
-                                     bboxes = target['boxes'],
+                                     bboxes = 'boxes',
                                      labels = labels)
             image_resized = sample['image']
             target['boxes'] = torch.Tensor(sample['bboxes'])
