@@ -8,10 +8,9 @@ NUM_WORKERS = 4 # Number of parallel workers for data loading.
 DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
 # Training images and XML files directory.
-TRAIN_DIR = 'data/Train/Train/JPEGImages'
+TRAIN_DIR = '/content/person_dataset/Train/Train/JPEGImages'
 # Validation images and XML files directory.
-VALID_DIR = 'data/Val/Val/JPEGImages'
-
+VALID_DIR = '/content/person_dataset/Val/Val/JPEGImages'
 # Classes: 0 index is reserved for background.
 CLASSES = [
     '__background__', 'person'

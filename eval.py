@@ -51,7 +51,7 @@ if __name__ == '__main__':
     model.to(DEVICE).eval()
 
     test_dataset = create_valid_dataset(
-        '/content/workingonit/person_dataset/Test/Test/JPEGImages'
+        '/content/person_dataset/Test/Test/JPEGImages'
     )
     test_loader = create_valid_loader(test_dataset, num_workers=NUM_WORKERS)
 
